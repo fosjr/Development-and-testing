@@ -1,11 +1,5 @@
-//WebUI
-//import { Builder, By } from "selenium-webdriver";
-//                , Actions, Key, until
 const { Builder, By } = require('selenium-webdriver');
 
-//payGradeCurrency_currencyName
-//payGradeCurrency_minSalary
-//payGradeCurrency_maxSalary
 async function WebUI()
 {
     let driver = new Builder().forBrowser('chrome').build();
@@ -46,7 +40,7 @@ async function WebUI()
     await driver.sleep(500);
 
     const element = await driver.findElement(By.xpath("//td[@class='left']/a[text()='UAHName']"));
-    const row = await element.findElement(By.xpath('./..'));
+    const row = await element.findElement(By.xpath('./../..'));
     
     if ((await row.findElement(By.xpath('td[text()="UAH - Ukraine Hryvnia"]')).isDisplayed()).valueOf()) {
         await row.findElement(By.xpath('td[1]/input')).click();
