@@ -2,12 +2,11 @@ XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 var fs = require ('fs');
 
 const filename = "dataB.txt";
-const filecontent = fs.readFileSync(filename)
 
 class WebAPI {
     
     Upload() {
-        let data = filecontent;
+        let data = filename;
         
         var xhr = new XMLHttpRequest();
         xhr.withCredentials = true;
