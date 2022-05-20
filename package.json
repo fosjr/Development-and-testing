@@ -1,0 +1,12 @@
+{
+    "scripts": {
+        "test": "jasmine"
+    },
+    "dependencies": {
+        "dropbox": "^10.29.0"
+    },
+    "devDependencies": {
+        "jasmine": "^3.10.0",
+        "jest": "^28.1.0"
+    }
+}
